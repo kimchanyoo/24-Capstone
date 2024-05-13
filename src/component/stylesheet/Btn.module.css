@@ -1,0 +1,12 @@
+.back {
+    width: 80px;
+    height: 75px;
+    margin-left: 10%;
+    cursor: pointer;
+}
+.tapBtn {
+    border: none;
+    padding: 20px 40px;
+    cursor: pointer;
+    border-radius: 15px 15px 0px 0px;
+}

@@ -1,0 +1,15 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  width: 1720px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+@media screen and (max-width: 800px) {
+  .Container {
+    width: 100%; /* 작은 화면에서는 너비를 화면에 맞게 조정합니다. */
+  }
+}

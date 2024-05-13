@@ -1,0 +1,91 @@
+/* 포스트 외부*/
+.UImg {
+    width: 37px;
+    height: 37px;
+}
+.Body{
+    display: grid;
+    grid-template-columns: 0.1px 1fr 1fr 1fr 1fr 0.1px;
+    grid-auto-rows: 2.5vh;
+    column-gap: 90px;
+    grid-template-areas:
+            ". a a b b ."
+            ". . . c c ."
+            ". d d d d ."
+            ". . . . . ."
+            ". e e e . .";
+}
+.a {
+    grid-area: a;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.b {
+    grid-area: b;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    color: #8c8c8c;
+    font-size: 12px;
+}
+.c {
+    grid-area: c;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.d {
+    grid-area: d;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+.e {
+    grid-area: e;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: #8c8c8c;
+    font-size: 12px;
+}
+
+
+/* 포스트 내부*/
+.pfName {
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.pfImg {
+    width: 37px;
+    height: 50px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 32px;
+    margin-left: 25px;
+    margin-top: 30px;
+}
+
+.body {
+    display: flex;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 30px;
+    overflow: auto;
+}
+
+.line {
+    background: #B5B5B5;
+    border: 0;
+    height: 1px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30%;
+}

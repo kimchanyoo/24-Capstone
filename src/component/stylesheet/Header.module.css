@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9%;
+}
+
+.logo {
+    width: 197px;
+    height: 67px;
+}
+
+.loginLogo {
+    width: 47px;
+    height: 49px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}

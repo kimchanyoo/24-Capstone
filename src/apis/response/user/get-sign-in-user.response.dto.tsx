@@ -1,4 +1,5 @@
-import User from "../../../component/types/interface/user.interface";
-export default interface GetSignInUserResponseDto extends User {
-
+import {User} from "types/interface";
+import RespoonseDto from "../response.dto";
+export default interface GetSignInUserResponseDto extends RespoonseDto, User {
+    
 }

@@ -30,12 +30,24 @@ interface Props {
   readonly label: string;
   readonly color: string;
   readonly onClick?: () => void;
+  readonly onClickHandler?: (email: string) => void; // 새로운 프로퍼티 추가
 }
 
-export const Button = ({ label, color, onClick }: Props) => {
+export const Button = ({ label, color, onClick, onClickHandler }: Props) => {
+  const handleClick = () => {
+    if (onClickHandler) {
+      // onClickHandler가 정의되어 있으면 호출
+      onClickHandler(''); // 빈 문자열 전달, 사용하지 않는다면 다른 값도 가능
+    }
+    if (onClick) {
+      // onClick이 정의되어 있으면 호출
+      onClick();
+    }
+  };
+
   return (
-    <Container color={color} onClick={onClick}>
-      {label}
-    </Container>
+      <Container color={color} onClick={handleClick}>
+        {label}
+      </Container>
   );
 };

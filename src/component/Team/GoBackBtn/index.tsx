@@ -8,7 +8,7 @@ export const GoBackBtn = () => {
     const navigate = useNavigate();
 
     const handleGoBack = () => {
-        navigate(-1);
+        navigate('/');
     };
 
     return (

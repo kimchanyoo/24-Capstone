@@ -20,7 +20,7 @@ export const LogoImage = () => {
     return (
         <Container>
             <ImageLogo>
-                <img src="/Logo.png" width="197px" height="67px" onClick={handleMain}></img>
+                <img src="/src/component/img/Logo.png" width="197px" height="67px" onClick={handleMain}></img>
             </ImageLogo>
         </Container>
     );

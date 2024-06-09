@@ -7,7 +7,8 @@
     display: grid;
     grid-template-columns: 0.1px 1fr 1fr 1fr 1fr 0.1px;
     grid-auto-rows: 2.5vh;
-    column-gap: 90px;
+    column-gap: 80px;
+    row-gap: 5px;
     grid-template-areas:
             ". a a b b ."
             ". . . c c ."
@@ -20,10 +21,12 @@
     display: flex;
     align-items: center;
     justify-content: left;
+    margin-right: -45%;
 }
 .b {
     grid-area: b;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: right;
     color: #8c8c8c;
@@ -34,13 +37,20 @@
     display: flex;
     align-items: center;
     justify-content: right;
+    background-color: #C6D9FF;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    margin-left: auto;
 }
 .d {
     grid-area: d;
-    display: flex;
     align-items: center;
     justify-content: left;
-    flex-wrap: wrap;
+    display: inline-block;
+    width: 270px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .e {
     grid-area: e;
@@ -86,6 +96,14 @@
 
 .content {
     display: flex;
-    justify-content: space-between;
-    margin-right: 30%;
+    flex-wrap: wrap;
+    width: auto;
+    margin-top: 10px;
+}
+.item {
+    margin-right: 10px;
+    color: black;
+    background-color: #C6D9FF;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
 }

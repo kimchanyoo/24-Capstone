@@ -6,47 +6,47 @@ interface ContainerProps {
 }
 
 const Container = styled.form`
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 318px;
-    height: 40px;
-    font-weight: bold;
-    font-size: 15px;
-    background-color: #ffffff;
-    border: 1px solid #d9d9d9;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 318px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
 `;
 
 const Button = styled.button<ContainerProps>`
-    position: absolute;
-    right: 10px;
-    border: 0;
-    color: #ffffff;
+  position: absolute;
+  right: 10px;
+  border: 0;
+  color: #ffffff;
+  background-color: ${(props) => props.color};
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 12px;
+
+  &:hover {
     background-color: ${(props) => props.color};
-    cursor: pointer;
-    width: 45px;
-    height: 25px;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 12px;
+    opacity: 0.8;
+  }
 
-    &:hover {
-        background-color: ${(props) => props.color};
-        opacity: 0.8;
-    }
-
-    &:active {
-        box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
-    }
+  &:active {
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 const Label = styled.input`
-    width: 95%;
-    height: 95%;
-    padding-right: 40px;
-    border: 0;
-    font-size: 15px;
-    font-weight: bold;
+  width: 95%;
+  height: 95%;
+  padding-right: 40px;
+  border: 0;
+  font-size: 15px;
+  font-weight: bold;
 `;
 
 interface Props {
@@ -54,7 +54,7 @@ interface Props {
     readonly type: string;
     readonly color: string;
     readonly buttonLabel: string;
-    readonly value: string; // value 속성 추가
+    readonly value: string | number | undefined; // value 속성 추가
     readonly onChange: (e: React.ChangeEvent<HTMLInputElement>) => void; // onChange prop을 추가합니다.
     readonly onClick?: () => void;
 }
@@ -62,7 +62,6 @@ interface Props {
 export const CheckButton = ({ label, color, onClick, buttonLabel, type, value, onChange }: Props) => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault(); // 폼 제출의 기본 동작을 방지합니다.
-        alert(value); // 부모 컴포넌트로부터 받은 value 값을 alert로 출력합니다.
         if(onClick) {
             onClick(); // 추가적으로 onClick 함수가 있다면 실행합니다.
         }
